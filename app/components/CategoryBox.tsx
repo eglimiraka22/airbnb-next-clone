@@ -2,7 +2,6 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import React, { useCallback } from "react";
 import { IconType } from "react-icons";
-import querystring from "query-string";
 import queryString from "query-string";
 interface CategoryBoxProps {
   icon: IconType;
