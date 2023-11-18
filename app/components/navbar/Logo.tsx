@@ -9,9 +9,10 @@ const Logo = () => {
     const router = useRouter()
   return (
     <Image
+    onClick={()=>router.push('/')}
         alt="Logo"
         src="/images/logo.png"
-        className="w-auto h-auto"
+        className="w-auto h-auto cursor-pointer"
         width={100}
         height={100}
         priority 
