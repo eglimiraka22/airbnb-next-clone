@@ -49,7 +49,7 @@ model Account {
 model Listing {
     id String @id @default(auto()) @map("_id") @db.ObjectId
     title String
-    descripton String
+    description String
     imageSrc String
     createdAt DateTime @default(now())
     category String
@@ -58,7 +58,7 @@ model Listing {
     guestCount Int
     locationValue String
     userId String @db.ObjectId
-    prince Int
+    price Int
 
     user User @relation(fields: [userId] , references: [id] ,onDelete:Cascade )
     reservations Reservation[]
