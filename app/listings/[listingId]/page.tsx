@@ -4,6 +4,12 @@ import ClientOnly from "@/app/components/ClientOnly";
 import EmptyState from "@/app/components/EmptyState";
 import React from "react";
 import ListingClient from "./ListingClient";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Reservation",
+  description: "Reservations",
+};
 
 interface IParams {
   listingId?: string;
