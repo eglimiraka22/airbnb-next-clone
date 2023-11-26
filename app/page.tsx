@@ -6,11 +6,11 @@ import Container from "./components/container";
 import ListingCard from "./components/listings/ListingCard";
 
 export default async function Home() {
-  const listings = await getListings()
-  const currentUser = await getCurrentUser()
+  const listings = await getListings();
+  const currentUser = await getCurrentUser();
   const isEmpty = true;
 
-  if (listings.length===0) {
+  if (listings.length === 0) {
     return (
       <ClientOnly>
         <EmptyState showReset />
@@ -34,10 +34,14 @@ export default async function Home() {
       gap-8
 '
         >
-          {listings.map((listing:any) => {
+          {listings.map((listing) => {
             return (
-              <ListingCard key={listing.id} data={listing} currentUser={currentUser} />
-            )
+              <ListingCard
+                key={listing.id}
+                data={listing}
+                currentUser={currentUser}
+              />
+            );
           })}
         </div>
       </Container>
