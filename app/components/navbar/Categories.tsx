@@ -21,7 +21,7 @@ import CategoryBox from "../CategoryBox";
 import { usePathname, useSearchParams } from "next/navigation";
 export const categories = [
   {
-    label: "Beach",
+    label: "Beach-House",
     icon: TbBeach,
     description: "This property is close to the beach!",
   },
@@ -123,7 +123,7 @@ const Categories = () => {
       >
         {categories.map((item, index) => (
           <CategoryBox
-            key={index}
+            key={`${index}-${item.label}`}
             label={item.label}
             selected={category === item.label}
             icon={item.icon}

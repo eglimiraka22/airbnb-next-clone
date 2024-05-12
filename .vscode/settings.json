@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/.html": true,
+        "**/.js": true,
+        "**/.scss": true
+    }
+}

@@ -23,11 +23,15 @@ const ListingHead: React.FC<ListingHeadProps> = ({
   const { getByValue } = useCountries();
 
   const location = getByValue(locationValue);
+
+  //  Property 'region' does not exist on type 'never[]'.ts(2339)
+
+ 
   return (
     <>
       <Heading
         title={title}
-        subtitle={`${location?.region}, ${location?.label}`}
+        subtitle={`${location && location?.region}, ${location?.label}`}
       />
       <div
         className='
